@@ -183,7 +183,160 @@
 </body>
 </html>
 
+<!-- card wth img -->
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ultra Beautiful Card</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <style>
+    body {
+      background-color: #f0f2f5;
+      padding: 20px;
+    }
+
+    .ultra-beautiful-card {
+      background-color: #1e1e2f;
+      border: 3px dashed skyblue;
+      border-radius: 20px;
+      color: white;
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 500px;
+      box-shadow: 0 0 40px rgba(135, 206, 235, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .ultra-beautiful-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 60px rgba(135, 206, 235, 0.4);
+    }
+
+    .ultra-beautiful-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(135, 206, 235, 0.15) 0%, transparent 70%);
+      animation: rotate 10s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .ultra-beautiful-heading {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 5px skyblue;
+      text-align: center;
+    }
+
+    .ultra-beautiful-image {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 20px rgba(135, 206, 235, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .ultra-beautiful-image:hover {
+      transform: scale(1.02);
+    }
+
+    .ultra-beautiful-text {
+      font-size: 1rem;
+      line-height: 1.6;
+      opacity: 0.95;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .ultra-beautiful-btn {
+      background: linear-gradient(45deg, skyblue, deepskyblue);
+      color: #fff;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 50px;
+      font-weight: bold;
+      box-shadow: 0 0 15px rgba(0, 191, 255, 0.6);
+      transition: all 0.3s ease;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .ultra-beautiful-btn:hover {
+      background: linear-gradient(45deg, deepskyblue, skyblue);
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0, 191, 255, 0.8);
+    }
+
+    @media (max-width: 576px) {
+      .ultra-beautiful-card {
+        padding: 1.5rem;
+      }
+
+      .ultra-beautiful-heading {
+        font-size: 1.4rem;
+      }
+
+      .ultra-beautiful-text {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ultra-beautiful-card text-center">
+    <div class="ultra-beautiful-heading">🌌 Welcome to AquaScript</div>
+    
+    <!-- Beautiful image -->
+    <img 
+      src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80"
+      alt="Beautiful Tech Sky"
+      class="ultra-beautiful-image"
+    />
+
+    <!-- Description -->
+    <div class="ultra-beautiful-text">
+      Dive into a stunning universe of developer tools with a card so beautiful,
+      it might just write your next project for you. 💫
+    </div>
+
+    <!-- Button -->
+    <button class="ultra-beautiful-btn" onclick="alert('Let’s build magic! ✨')">
+      Let's Build Magic
+    </button>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      console.log("Everything is ultra beautiful ✨");
+    });
+  </script>
+</body>
+</html>
+
+
+  
 
 
 
