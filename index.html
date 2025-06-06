@@ -3,70 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ultra Beautiful Sky-Dot Background</title>
-  
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Stunning AquaScript Background</title>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #0e0e1a;
-      overflow-x: hidden;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .sky-dot-background {
+    /* Particle + glow background */
+    #particles-js {
       position: fixed;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
-      background: transparent;
-      z-index: -1;
-      pointer-events: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+      background: linear-gradient(120deg, #0d1b2a, #1b2f3d, #13293d);
+      z-index: -9999;
+      overflow: hidden;
     }
 
-    .sky-dot {
-      width: 3px;
-      height: 3px;
-      margin: 10px;
+    /* Magical blurred nebula layers */
+    .glow-layer {
+      position: fixed;
+      width: 600px;
+      height: 600px;
       border-radius: 50%;
-      background-color: #00bfff;
-      box-shadow: 0 0 6px #00bfff;
-      opacity: 0.85;
-      animation: glow 3s infinite ease-in-out;
+      filter: blur(150px);
+      z-index: -9998;
+      opacity: 0.4;
+      animation: floatGlow 20s infinite ease-in-out;
     }
 
-    @keyframes glow {
-      0%, 100% {
-        transform: scale(1);
-        opacity: 0.85;
-      }
-      50% {
-        transform: scale(1.2);
-        opacity: 1;
-      }
+    .glow-blue {
+      background: #00ffff;
+      top: 20%;
+      left: 10%;
     }
 
-    .card {
-      backdrop-filter: blur(5px);
-      background-color: rgba(255, 255, 255, 0.85);
+    .glow-purple {
+      background: #6c5ce7;
+      bottom: 10%;
+      right: 10%;
+      animation-delay: 10s;
+    }
+
+    @keyframes floatGlow {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-40px) scale(1.1); }
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: transparent;
+      color: #e0f7fa;
+    }
+
+    .container {
+      position: relative;
+      max-width: 900px;
+      margin: 10vh auto;
+      padding: 3rem;
+      background: rgba(15, 23, 42, 0.85);
+      border-radius: 25px;
+      box-shadow: 0 30px 60px rgba(0, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      z-index: 1;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .container:hover {
+      box-shadow: 0 40px 80px rgba(0, 255, 255, 0.35);
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #76e2f0;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #cbeafe;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #7df9ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #e0ffff;
+    }
+
+    pre.java-code {
+      background-color: #0f172a;
+      color: #60d5f7;
+      padding: 1rem;
+      border-radius: 12px;
+      overflow-x: auto;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 4vh 1rem;
+        padding: 2rem;
+      }
+      h1 {
+        font-size: 2.3rem;
+      }
     }
   </style>
 </head>
-<body style="background: #0e0e1a;">
+<body>
 
-  <!-- ✨ Beautiful Dot Background Layer -->
-  <div class="sky-dot-background"></div>
+<!-- Particle Background -->
+<div id="particles-js"></div>
 
-  <!-- 🌟 Main Content -->
-  <!--- add here web contents --->
+<!-- Animated glow blobs -->
+<div class="glow-layer glow-blue"></div>
+<div class="glow-layer glow-purple"></div>
+
+<!-- Your Content -->
 
 <font size="7" color="white"><center><b>AquaScript Challenges</b></center></font> 
 
@@ -167,23 +231,14 @@
       Explore the most advanced developer experiences with style, speed, and sky-blue vibes. 💙
     </div>
   </div>
-
-  <!-- Optional JavaScript: (if needed later for future interactivity) -->
-  <script>
-    $(document).ready(function () {
-      console.log("Ultra Beautiful Card is ready!");
-      // Future JS features can go here
-    });
-
-    // Example Java function call (not affecting main card)
-    function sayHello() {
-      java.lang.System.out.println("Hello from Java (imaginary)");
-    }
-  </script>
 </body>
 </html>
 
-<!-- card wth img -->
+
+
+
+
+  <!-- card wth img -->
 
 
 <!DOCTYPE html>
@@ -253,7 +308,7 @@
       width: 100%;
       border-radius: 15px;
       margin-bottom: 1rem;
-      box-shadow: 0 0 20px rgba(135, 206, 235, 0.3);
+box-shadow: 0 0 20px rgba(135, 206, 235, 0.3);
       transition: transform 0.3s ease;
     }
 
@@ -331,7 +386,7 @@
     $(document).ready(function () {
       console.log("Everything is ultra beautiful ✨");
     });
-  </script>
+</script>
 </body>
 </html>
 
@@ -344,30 +399,94 @@
 
   
 
-  <!-- jQuery + Bootstrap Bundle -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
 
-  <script>
-    $(document).ready(function () {
-      const $bg = $(".sky-dot-background");
-      const rows = 15;
-      const cols = 30;
 
-      for (let i = 0; i < rows * cols; i++) {
-        const $dot = $("<div>").addClass("sky-dot");
-        $bg.append($dot);
-      }
 
-      // Random animation delays for better effect
-      setInterval(() => {
-        $(".sky-dot").each(function () {
-          const delay = Math.random() * 3;
-          $(this).css("animation-delay", `${delay}s`);
-        });
-      }, 3000);
+
+
+  
+
+  
+
+<!-- ParticlesJS Config -->
+<script>
+  $(document).ready(function () {
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 110,
+          density: { enable: true, value_area: 900 }
+        },
+        color: { value: ["#7df9ff", "#00ffff", "#6c5ce7"] },
+        shape: {
+          type: "circle",
+          stroke: { width: 0, color: "#000" }
+        },
+        opacity: {
+          value: 0.6,
+          random: true
+        },
+        size: {
+          value: 3,
+          random: true
+        },
+        line_linked: {
+          enable: true,
+          distance: 140,
+          color: "#7df9ff",
+          opacity: 0.25,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "bounce"
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          onclick: { enable: true, mode: "repulse" },
+          resize: true
+        },
+        modes: {
+          grab: {
+            distance: 150,
+            line_linked: { opacity: 0.7 }
+          },
+          repulse: {
+            distance: 120,
+            duration: 0.4
+          }
+        }
+      },
+      retina_detect: true
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+        
